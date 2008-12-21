@@ -106,6 +106,7 @@ function changeType(type) {
     updateUI();
 
     chart.setType(type);
+    updateColorTag();
     refreshData();
 }
 
@@ -175,13 +176,24 @@ function updateColorTag() {
         // Remove any tag
         removeColorTag();
     } else {
+        /* Depending on the map type the color has to be either #ABCABC or 0xABCABC */
+        /* 0x: geomap
+            #: all others 
+        */
+        if (chart.chart_type == "geomap") {
+            prefix = "0x";
+            suffix = "";
+        } else {
+            prefix = '"#';
+            suffix = '"';
+        }
+        
         o = "[";
         for (var i=0; i<COLOR_BUTTONS; i++) {
-            o += "0x" + COLORS[i] + ", ";
+            o += prefix + COLORS[i] + suffix + ", ";
         }
         o = o.substr(0, o.length-2) + "]";
         addColorTag(o);
     }
-    
     refreshData();
 }
