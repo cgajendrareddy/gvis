@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="gvis.js"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["piechart"]});
+      google.setOnLoadCallback(drawChart);
+      
+      function drawChart() {
+          var chart = new GVis("chart_div", "piechart");
+          chart.setRows([["CN", 1000], ["US", 5000], ["IN", 2500], ["DE", 4000], ["FR", 2200]]);
+          chart.draw({ is3D: true, width:600, height:360 });      
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="chart_div"></div>
+  </body>
+</html>
