@@ -9,6 +9,10 @@ text-decoration:none;
 a:hover {
 text-decoration:none;
 }
+#chart {
+border:1px solid #BBBBBB;
+float:left;
+}
 
 
 #in {
