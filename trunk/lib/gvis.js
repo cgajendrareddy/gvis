@@ -12,6 +12,7 @@ function GVis(div_id, chart_type) {
         if (type == "table")          return google.visualization.Table;
         if (type == "piechart")       return google.visualization.PieChart;
         if (type == "barchart")       return google.visualization.BarChart;
+        if (type == "columnchart")    return google.visualization.ColumnChart;
         if (type == "areachart")      return google.visualization.AreaChart;
         if (type == "linechart")      return google.visualization.LineChart;
         if (type == "scatterchart")   return google.visualization.ScatterChart;

@@ -1,4 +1,4 @@
-google.load('visualization', '1', {packages: ['table', 'gauge', 'intensitymap', 'barchart', 'piechart', 'geomap', 'imagesparkline', 'scatterchart', 'areachart', 'linechart']});
+google.load('visualization', '1', {packages: ['table', 'gauge', 'intensitymap', 'barchart', 'piechart', 'geomap', 'imagesparkline', 'scatterchart', 'areachart', 'linechart', 'columnchart']});
 google.setOnLoadCallback(start);
 
 var chart;
