@@ -1,0 +1,20 @@
+GVIS
+
+ Author: Chris Hager
+   Date: December 2008
+License: GPLv3
+   Home: http://code.google.com/p/gvis
+   
+About
+=====   
+GVis is a tiny simplification layer for the Google Visualisation API which makes life a lot easier.
+
+GVis is very easy to use, just have a quick look in the demos/ directory. It takes no more than 3 lines
+of JavaScript to get something up and running!
+
+demos/ 
+ * index.html let's you play around with different map types and outputs the source code
+ * demo1.html is a simple demo of nothing more but the bare minimum for a pie chart
+ * demo2.html same, but for an intensity map
+ * demo3.html same, but for a geo map
+ 

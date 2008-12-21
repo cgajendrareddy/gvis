@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <link type="text/css" rel="stylesheet" href="index.css" />
+        <script type="text/javascript" src="http://www.google.com/jsapi"></script>        
+        <script type="text/javascript" src="gvis.js"></script>        
+        <script type="text/javascript" src="demodata.js"></script>        
+        <script type="text/javascript" src="index.js"></script>        
+    </head>
+    <body>
+        <h3><a href="http://code.google.com/p/gvis/">GVis</a> - A Google Visualisation API Simplification Layer</h3>
+        
+        <div id="chart"></div>
+        <div id="input">
+            <div style="float:left; margin-right:20px;">
+                Data:<br>
+                <textarea rows="5" cols="40" id="id_data"></textarea>
+            </div>
+            <div>
+                Parameters:<br>
+                <textarea id="id_params" cols="30"></textarea>
+            </div>
+            <div style="margin-top:10px;"><input value="Update" type="button" onclick="refreshData()" /></div>
+        </div>
+        <div style="clear:both;"></div>
+        <div id="options">
+            Chart-Type:&nbsp; 
+            <select size="0" id="id_chartType" onchange="changeType(this.value)">
+                <option value="table">Table</option>
+                <option value="piechart">Pie Chart</option>
+                <option value="linechart">Line Chart</option>
+                <option value="barchart">Bar Chart</option>
+                <option value="areachart">Area Chart</option>
+                <option value="scatterchart">Scatter Chart</option>
+                <option value="imagesparkline">Image Spark Line</option>
+                <option value="intensitymap">Intensity Map</option>
+                <option value="geomap" selected="selected">Geo Map</option>
+            </select>
+        </div>
+        <div id="source_container">
+            Source Code:
+            <div id="source"><pre><<b></b>html>
+  <<b></b>head>
+    <<b></b>script type="text/javascript" src="http://www.google.com/jsapi"><<b></b>/script>__META1__
+    <<b></b>script type="text/javascript" src="gvis.js"><<b></b>/script>
+    <<b></b>script type="text/javascript">
+      google.load("visualization", "1", {packages:["__METAPKG__"]});
+      google.setOnLoadCallback(drawChart);
+      
+      function drawChart() {
+          var chart = new GVis("chart_div", "__METAPKG__");
+          chart.setRows([__METADATA__]);
+          chart.draw(__METAPARAMS__);      
+      }
+    <<b></b>/script>
+  <<b></b>/head>
+
+  <<b></b>body>
+    <<b></b>div id="chart_div"><<b></b>/div>
+  <<b></b>/body>
+<<b></b>/html></pre></div>
+        </div>
+    </body>
+</html>
