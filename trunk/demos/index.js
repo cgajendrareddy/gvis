@@ -85,6 +85,7 @@ function refreshData() {
     eval("params = " + $$("id_params").value + ";");
     
     chart.clear();
+    chart.setColumnLabels($$("id_colLabels").value.split(","));
     chart.setRows(data);    
     chart.draw(params);
 

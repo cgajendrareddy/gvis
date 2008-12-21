@@ -1,5 +1,5 @@
 /*
-    GVis -- A Google Visualisation Simplification Layer
+    GVis -- A Google Visualization Simplification Layer
     
     Author: Chris Hager (chris [at] linuxuser.at)
       Date: December 2008
@@ -8,6 +8,7 @@
 */
        
 function GVis(div_id, chart_type) {    
+    this.column_labels = new Array();
     this.get_gChart = function(type) {
         if (type == "table")          return google.visualization.Table;
         if (type == "piechart")       return google.visualization.PieChart;
@@ -35,6 +36,17 @@ function GVis(div_id, chart_type) {
     if (div_id)     { this.div_id = div_id;     } else { return alert("No Container-Object Specified!"); }
     if (chart_type) { this.setType(chart_type); } else { this.setType("piechart") }
         
+    this.clear = function() {
+        // Removes all Rows and Columns
+        this.column_labels = new Array();
+        this.data.removeRows(0, this.data.getNumberOfRows());
+        this.data.removeColumns(0, this.data.getNumberOfColumns());    
+    }
+    
+    this.setColumnLabels = function(arr) {
+        this.column_labels = arr;
+    }
+
     this.addColumns = function(params) {
         // params Format: { 'text': 'type', ... } eg { 'Task': 'string', 'Hours': 'number' }
         for (param in params) {
@@ -57,12 +69,6 @@ function GVis(div_id, chart_type) {
         }
     }
     
-    this.clear = function() {
-        // Removes all Rows and Columns
-        this.data.removeRows(0, this.data.getNumberOfRows());
-        this.data.removeColumns(0, this.data.getNumberOfColumns());    
-    }
-    
     this.addRow = function(items) {
         // items Format: ['a', 3] ...
         if (items.length == 0) return ;
@@ -74,12 +80,17 @@ function GVis(div_id, chart_type) {
                 // 1. Test: Is Boolean?
                 // 2. Is Numeric?
                 // 3. -> String
-                if ((items[i] === true) || (items[i] === false)) {
-                    this.data.addColumn("boolean", "");                         
-                } else if (String(parseInt(items[i])) == String(items[i])) {
-                    this.data.addColumn("number", "");
+                if (this.column_labels[i]) {
+                    l = this.column_labels[i];
                 } else {
-                    this.data.addColumn("string", "");                
+                    l = "";
+                }
+                if ((items[i] === true) || (items[i] === false)) {
+                    this.data.addColumn("boolean", l);                         
+                } else if (String(parseInt(items[i])) == String(items[i])) {
+                    this.data.addColumn("number", l);
+                } else {
+                    this.data.addColumn("string", l);                
                 }
             }
         }
