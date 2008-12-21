@@ -1,5 +1,21 @@
 body, html {
 font-family:arial;
+margin:0px 10px;
+}
+
+a {
+text-decoration:none;
+}
+a:hover {
+text-decoration:none;
+}
+
+
+#in {
+background: #FAFAFA;;
+border:1px solid #BBBBBB;
+padding:10px;
+margin-top:10px;
 }
 
 #input {
@@ -7,7 +23,6 @@ margin-top:10px;
 }
 
 #options {
-margin-top:30px;
 }
 
 #source_container {
@@ -28,5 +43,16 @@ padding:0.99em;
 }
 
 #colorpicker {
+position:absolute;
+left:330px;
 display:none;
+z-index:10;
+}
+
+.colorbutton {
+float:left;
+width:16px;
+height:16px;
+border:1px solid #BBBBBB;
+margin:4px;
 }
