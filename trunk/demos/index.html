@@ -2,27 +2,32 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         <link type="text/css" rel="stylesheet" href="index.css" />
+        <link type="text/css" rel="stylesheet" href="jquery/ui.all.css" />
+
         <script type="text/javascript" src="http://www.google.com/jsapi"></script>        
+
+        <script type="text/javascript" src="jquery/jquery-1.2.6.js"></script>
+		<script type="text/javascript" src="jquery/ui/ui.core.js"></script>
+		<script type="text/javascript" src="jquery/ui/ui.autocomplete.js"></script>
+		<script type="text/javascript" src="jquery/ui/ui.colorpicker.js"></script>
+		<script type="text/javascript" src="jquery/ui/ui.resizable.js"></script>
+
+        <script type='text/javascript'>var ISOCODES=["Bulgaria (BG)","Cameroon (CM)","Guadeloupe (GP)","Haiti (HT)","Burundi (BI)","Chile (CL)","Falkland Islands (malvinas) (FK)","Tokelau (TK)","French Polynesia (PF)","Iran, Islamic Republic Of (IR)","Singapore (SG)","Panama (PA)","Guinea (GN)","Uruguay (UY)","Bhutan (BT)","Northern Mariana Islands (MP)","Samoa (WS)","Congo, The Democratic Republic Of The (CD)","Sao Tome And Principe (ST)","Ghana (GH)","Dominica (DM)","Saint Martin (MF)","Dominican Republic (DO)","Paraguay (PY)","Kenya (KE)","Jordan (JO)","Belarus (BY)","Djibouti (DJ)","Andorra (AD)","Malta (MT)","Finland (FI)","United Arab Emirates (AE)","Faroe Islands (FO)","Cuba (CU)","Isle Of Man (IM)","Spain (ES)","Macao (MO)","Hungary (HU)","Christmas Island (CX)","Solomon Islands (SB)","Cambodia (KH)","Guatemala (GT)","India (IN)","Korea, Republic Of (KR)","Poland (PL)","El Salvador (SV)","Turkey (TR)","Greenland (GL)","Romania (RO)","Libyan Arab Jamahiriya (LY)","Fiji (FJ)","Belize (BZ)","Nauru (NR)","Saint Barth&eacute;lemy (BL)","Netherlands Antilles (AN)","Greece (GR)","Tajikistan (TJ)","Namibia (NA)","Liechtenstein (LI)","Mauritius (MU)","American Samoa (AS)","Guam (GU)","San Marino (SM)","Liberia (LR)","Burkina Faso (BF)","Mozambique (MZ)","Belgium (BE)","Guyana (GY)","China (CN)","Latvia (LV)","Marshall Islands (MH)","Cayman Islands (KY)","Nicaragua (NI)","Myanmar (MM)","Maldives (MV)","Bahrain (BH)","Turkmenistan (TM)","Cyprus (CY)","Argentina (AR)","Somalia (SO)","French Guiana (GF)","Bermuda (BM)","Taiwan, Province Of China (TW)","Kyrgyzstan (KG)","Montserrat (MS)","Philippines (PH)","Suriname (SR)","Italy (IT)","Saudi Arabia (SA)","Afghanistan (AF)","Malawi (MW)","Hong Kong (HK)","Niger (NE)","Puerto Rico (PR)","Guernsey (GG)","Oman (OM)","Germany (DE)","Rwanda (RW)","Virgin Islands, British (VG)","British Indian Ocean Territory (IO)","Czech Republic (CZ)","Albania (AL)","Madagascar (MG)","Brazil (BR)","Botswana (BW)","Bolivia (BO)","Lao People's Democratic Republic (LA)","Uganda (UG)","Netherlands (NL)","Morocco (MA)","United Kingdom (GB)","Cape Verde (CV)","Lithuania (LT)","Tuvalu (TV)","Sudan (SD)","Mexico (MX)","Chad (TD)","Israel (IL)","Virgin Islands, U.s. (VI)","Ukraine (UA)","Jersey (JE)","Japan (JP)","Monaco (MC)","Micronesia, Federated States Of (FM)","Bosnia And Herzegovina (BA)","Tunisia (TN)","Syrian Arab Republic (SY)","Lesotho (LS)","Macedonia, The Former Yugoslav Republic Of (MK)","Brunei Darussalam (BN)","Slovenia (SI)","Iceland (IS)","Bouvet Island (BV)","Estonia (EE)","Bangladesh (BD)","&aring;land Islands (AX)","Nigeria (NG)","R&eacute;union (RE)","Serbia (RS)","New Zealand (NZ)","Grenada (GD)","Russian Federation (RU)","Ireland (IE)","Saint Vincent And The Grenadines (VC)","Tanzania, United Republic Of (TZ)","Malaysia (MY)","Senegal (SN)","United States Minor Outlying Islands (UM)","Saint Kitts And Nevis (KN)","Korea, Democratic People's Republic Of (KP)","Saint Lucia (LC)","Angola (AO)","Seychelles (SC)","Pakistan (PK)","Cook Islands (CK)","Mauritania (MR)","Slovakia (SK)","Mali (ML)","Congo (CG)","Austria (AT)","Cocos (keeling) Islands (CC)","Sierra Leone (SL)","Mongolia (MN)","Lebanon (LB)","Egypt (EG)","Equatorial Guinea (GQ)","Jamaica (JM)","Canada (CA)","Moldova, Republic Of (MD)","Switzerland (CH)","Martinique (MQ)","Colombia (CO)","Antigua And Barbuda (AG)","Antarctica (AQ)","Viet Nam (VN)","Indonesia (ID)","Mayotte (YT)","South Africa (ZA)","Honduras (HN)","Georgia (GE)","Tonga (TO)","Saint Pierre And Miquelon (PM)","Comoros (KM)","Turks And Caicos Islands (TC)","Aruba (AW)","Sri Lanka (LK)","Kuwait (KW)","Armenia (AM)","Trinidad And Tobago (TT)","France (FR)","Central African Republic (CF)","Wallis And Futuna (WF)","Gambia (GM)","Pitcairn (PN)","French Southern Territories (TF)","Australia (AU)","Uzbekistan (UZ)","C&ocirc;te D'ivoire (CI)","Ecuador (EC)","Palestinian Territory, Occupied (PS)","Venezuela (VE)","Iraq (IQ)","South Georgia And The South Sandwich Islands (GS)","Vatican City State (see)","Vanuatu (VU)","Swaziland (SZ)","Gibraltar (GI)","Gabon (GA)","United States (US)","Papua New Guinea (PG)","Azerbaijan (AZ)","Nepal (NP)","Denmark (DK)","Norfolk Island (NF)","Palau (PW)","Qatar (QA)","Norway (NO)","Anguilla (AI)","Zambia (ZM)","Peru (PE)","Niue (NU)","Timor-leste (TL)","Heard Island And Mcdonald Islands (HM)","Sweden (SE)","Ethiopia (ET)","Costa Rica (CR)","Saint Helena (SH)","Kazakhstan (KZ)","Algeria (DZ)","Yemen (YE)","Benin (BJ)","Barbados (BB)","Thailand (TH)","Kiribati (KI)","Western Sahara (EH)","Guinea-bissau (GW)","Luxembourg (LU)","Croatia (HR)","Togo (TG)","Bahamas (BS)","Svalbard And Jan Mayen (SJ)","New Caledonia (NC)","Montenegro (ME)","Portugal (PT)","Eritrea (ER)"];</script>
         <script type="text/javascript" src="gvis.js"></script>        
         <script type="text/javascript" src="demodata.js"></script>        
         <script type="text/javascript" src="index.js"></script>        
+        <!--[if IE]>
+        <style type="text/css">#id_colors { display:none; }</style>
+        <![endif]-->
+
     </head>
     <body>
-        <h3><a href="http://code.google.com/p/gvis/">GVis</a> - A Google Visualisation API Simplification Layer</h3>
+        <h3>Google Visualisation API Demos with <a href="http://code.google.com/p/gvis/">GVis</a></h3>
         
         <div id="chart"></div>
-        <div id="input">
-            <div style="float:left; margin-right:20px;">
-                Data:<br>
-                <textarea rows="5" cols="40" id="id_data"></textarea>
-            </div>
-            <div>
-                Parameters:<br>
-                <textarea id="id_params" cols="30"></textarea>
-            </div>
-            <div style="margin-top:10px;"><input value="Update" type="button" onclick="refreshData()" /></div>
-        </div>
-        <div style="clear:both;"></div>
+        
+        <div id="in">
+            <div id="colorpicker"></div>            
         <div id="options">
             Chart-Type:&nbsp; 
             <select size="0" id="id_chartType" onchange="changeType(this.value)">
@@ -34,9 +39,31 @@
                 <option value="scatterchart">Scatter Chart</option>
                 <option value="imagesparkline">Image Spark Line</option>
                 <option value="intensitymap">Intensity Map</option>
-                <option value="geomap" selected="selected">Geo Map</option>
+                <option value="geomap" id="id_select_geomap" selected="selected">Geo Map</option>
             </select>
         </div>
+        <div id="input">
+            <div style="float:left; margin-right:20px;">
+                Data <small>(<span id="id_dataInfo"></span>):</small><br>
+                <textarea rows="5" cols="40" id="id_data"></textarea><br>
+                <div style="margin-top:8px;">
+                    Country: <input type="text" onkeyup="LASTAUTOVAL=this.value;" id="autocomplete" />
+                </div>
+                <div style="margin-top:8px;" id="id_colors">
+                Colors: <small><a href="javascript:void(0)" onclick="colorButton_add()">add</a>, <a href="javascript:void(0)" onclick="colorButton_del()">del</a></small> 
+                <div id="colorbuttons"></div> 
+                </div>
+
+            </div>
+            <div>
+                Parameters <small>(<span id="id_paramsInfo"></span>):</small><br>
+                <textarea id="id_params" cols="40" rows="5"></textarea><br>
+                <input value="Update" type="button" onclick="refreshData()" />
+            </div>
+        </div>
+        <div style="clear:both;"></div>
+        </div>
+        
         <div id="source_container">
             Source Code:
             <div id="source"><pre><<b></b>html>
@@ -60,5 +87,6 @@
   <<b></b>/body>
 <<b></b>/html></pre></div>
         </div>
+        <br><br>
     </body>
 </html>
