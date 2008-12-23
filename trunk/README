@@ -14,7 +14,7 @@ of JavaScript to get something up and running!
 
 demos/ 
  * index.html let's you play around with different map types and outputs the source code
- * demo1.html is a simple demo of nothing more but the bare minimum for a pie chart
- * demo2.html same, but for an intensity map
- * demo3.html same, but for a geo map
+ * demo1.html 
+ * demo2.html 
+ * demo3.html 
  

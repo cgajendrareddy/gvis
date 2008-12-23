@@ -100,7 +100,7 @@ function GVis(div_id, chart_type) {
                 }
 
                 // Guess Column-type
-                t = typeof(items[i])
+                t = typeof(items[i]);
 
                 if (t == "boolean") {
                     this.data.addColumn("boolean", l);       
